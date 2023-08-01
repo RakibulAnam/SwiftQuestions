@@ -1,26 +1,29 @@
 
 
 
-func swapTwoValues<T>(n1:T, n2:T){
+struct Temperature {
     
-    print("N1 is \(n1) and n2 is \(n2)")
+    let celsius : Int
     
-    var c : T
-    var a = n1
-    var b = n2
+    init(celsius: Int) {
+        self.celsius = celsius
+    }
+}
+
+extension Temperature{
     
-    c = a
-    a = b
-    b = c
-    
-    print("After swap")
-    print("")
-    print("N1 is \(a) and n2 is \(b)")
+    var fahrenheit : Int{
+        var convert = ( Float(celsius) * (9/5) ) + 32
+        return Int(convert)
+    }
     
 }
 
-// With String
-swapTwoValues(n1: 10, n2: 24)
 
-//With Int
-swapTwoValues(n1: "Rohid", n2: "MOhit")
+
+let temperature = Temperature(celsius: 10)
+
+print(temperature.fahrenheit)
+
+
+
