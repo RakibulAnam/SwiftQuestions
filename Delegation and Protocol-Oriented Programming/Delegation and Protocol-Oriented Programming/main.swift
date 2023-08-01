@@ -31,4 +31,5 @@ var btnMust = Button()
 var someButton = ViewController(button: btnMust)
 
 // When the button is Tapped, it sees who is currently the delegate and will call the Button Tapped function of that delegate
-btnMust.btnTapped()
+
+//btnMust.btnTapped()
